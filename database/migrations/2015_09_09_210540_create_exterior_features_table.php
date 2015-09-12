@@ -15,8 +15,21 @@ class CreateExteriorFeaturesTable extends Migration
         Schema::create('exterior_features', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->integer('sortPos');
             $table->timestamps();
         });
+
+        // seed the table
+        $data = [];
+        $features = \App\ExteriorFeature::getExteriorFeatureList();
+        foreach ($features as $feature) {
+            $data[] = array(
+                'id' => $feature['id'],
+                'name' => $feature['name'],
+                'sortPos' => $feature['sortPos']
+            );
+        }
+        DB::table('exterior_features')->insert($data);
     }
 
     /**

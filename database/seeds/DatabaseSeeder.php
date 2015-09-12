@@ -19,8 +19,8 @@ class DatabaseSeeder extends Seeder
         // $this->call(UserTableSeeder::class);
 
         factory(App\Property::class, 200)->create();
-        factory(App\Architecture::class, 30)->create();
-        factory(App\ExteriorFeature::class, 30)->create();
+//          factory(App\Architecture::class, 30)->create();
+//        factory(App\ExteriorFeature::class, 30)->create();
 
         $faker = Faker::create();
 

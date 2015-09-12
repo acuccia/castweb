@@ -15,8 +15,21 @@ class CreateArchitecturesTable extends Migration
         Schema::create('architectures', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->integer('sortPos');
             $table->timestamps();
         });
+
+        // seed the table
+        $data = [];
+        $architectures = \App\Architecture::getArchitectureList();
+        foreach ($architectures as $architecture) {
+            $data[] = array(
+                'id' => $architecture['id'],
+                'name' => $architecture['name'],
+                'sortPos' => $architecture['sortPos']
+            );
+        }
+        DB::table('architectures')->insert($data);
     }
 
     /**

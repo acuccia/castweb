@@ -14,7 +14,7 @@ use App\ExteriorFeature;
 class PropertiesController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display all properties
      *
      * @return Response
      */
@@ -24,7 +24,7 @@ class PropertiesController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new property
      *
      * @return Response
      */
@@ -58,7 +58,7 @@ class PropertiesController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the property
      *
      * @param  int  $id
      * @return Response
@@ -82,8 +82,8 @@ class PropertiesController extends Controller
 
     public function search()
     {
-        $architectures = Architecture::all();
-        $exteriorFeatures = ExteriorFeature::all();
+        $architectures = Architecture::all()->sortBy('name');
+        $exteriorFeatures = ExteriorFeature::all()->sortBy('name');
         return view('properties.search', compact('architectures', 'exteriorFeatures'));
     }
 
