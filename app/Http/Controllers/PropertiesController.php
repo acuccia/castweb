@@ -44,6 +44,11 @@ class PropertiesController extends Controller
         //
     }
 
+    public function uploadPhotos()
+    {
+        return 'photos uploaded';
+    }
+
     /**
      * Display the specified resource.
      *

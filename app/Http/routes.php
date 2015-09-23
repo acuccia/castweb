@@ -17,4 +17,5 @@ Route::get('/', function () {
 
 Route::get('properties/search', 'PropertiesController@search');
 Route::post('properties/search', 'PropertiesController@searchResults');
+Route::post('properties/{$id}/photos', 'PropertiesController@uploadPhotos');
 Route::resource('properties', 'PropertiesController');

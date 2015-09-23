@@ -18,6 +18,11 @@
 
     @include('properties.details')
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/dropzone.js"></script>
+
+<form action="/properties/1/photos" class="dropzone" id="photoupload">
+</form>
+
 @stop
 
 

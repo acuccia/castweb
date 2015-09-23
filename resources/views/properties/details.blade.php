@@ -1,26 +1,16 @@
+
+
+
 <div class="row">
-    <div class="col-md-3">
-        <div class="panel panel-default">
-            <div class="panel-heading">Architecture</div>
-            <div class="panel-body">
-                @foreach($property->architectures as $architecture)
 
-                    <p>{{ $architecture->name }}</p>
+    @include('properties.detailPanel', ['category' => 'Architecture', 'featureList' => $property->architectures])
+    @include('properties.detailPanel', ['category' => 'Exterior Features', 'featureList' => $property->exteriorFeatures])
+    @include('properties.detailPanel', ['category' => 'Bathroom', 'featureList' => $property->bathroomFeatures])
+    @include('properties.detailPanel', ['category' => 'Bedroom', 'featureList' => $property->bedroomFeatures])
+    @include('properties.detailPanel', ['category' => 'Den', 'featureList' => $property->denFeatures])
+    @include('properties.detailPanel', ['category' => 'Dining Room', 'featureList' => $property->diningFeatures])
+    @include('properties.detailPanel', ['category' => 'Driveway', 'featureList' => $property->drivewayFeatures])
+    @include('properties.detailPanel', ['category' => 'Entry', 'featureList' => $property->entryFeatures])
+    @include('properties.detailPanel', ['category' => 'Garage', 'featureList' => $property->garageFeatures])
 
-                @endforeach
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="panel panel-default">
-            <div class="panel-heading">Exterior Features</div>
-            <div class="panel-body">
-                @foreach($property->exteriorFeatures as $feature)
-
-                    <p>{{ $feature->name }}</p>
-
-                @endforeach
-            </div>
-        </div>
-    </div>
 </div>
