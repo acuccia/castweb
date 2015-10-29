@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@home');
+
 
 Route::get('properties/search', 'PropertiesController@search');
 Route::post('properties/search', 'PropertiesController@searchResults');

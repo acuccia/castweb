@@ -1,4 +1,4 @@
-<div class="col-md-3">
+<div class="col-sm-3">
     <div class="panel panel-default">
         <div class="panel-heading">{{ $category}}</div>
         <div class="panel-body">
