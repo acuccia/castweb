@@ -12,7 +12,7 @@
 <div class="container">
 
     <div class="text-left" style="margin-bottom: 10px">
-        <img src="logo.jpg" height="100px">
+        <img src="/logo.jpg" height="100px">
     </div>
 
     <div>
